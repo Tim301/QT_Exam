@@ -4,10 +4,16 @@
 
 class CompteTours: public QWidget
 {
+Q_OBJECT
 public:
     CompteTours();
-private:
     void paintEvent(QPaintEvent *event);
+private:
+    int Angle;
+    const int  AngleInit;
+    const int AngleMax;
+public slots:
+    void SetRPM(int value);
 };
 
 #endif // COMPTETOURS_H
